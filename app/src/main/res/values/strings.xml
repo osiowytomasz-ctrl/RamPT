@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RamPT</string>
+    <string name="status_rozlaczono">Rozłączono</string>
+    <string name="polacz">Połącz</string>
+    <string name="rozlacz">Rozłącz</string>
+    <string name="wyslij">Wyślij</string>
+    <string name="zapisz">Zapisz</string>
+    <string name="ustaw_promien">Ustaw R</string>
+    <string name="promien_hint">promień [mm], np. 200</string>
+    <string name="komenda_hint">komenda, np. m200</string>
+    <string name="analiza_walcowosci">Analiza walcowości (symulacja)</string>
+    <string name="obliczenia_title">Obliczenia</string>
+    <string name="obliczenia_description">Wyniki poziomów pomiarowych i centrowania z objaśnieniem obliczeń. Odznacz „W raporcie\" przy wyniku, który ma zostać pominięty w raporcie PDF.</string>
+    <string name="zamknij">Zamknij</string>
+</resources>

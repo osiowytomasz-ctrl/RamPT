@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurfaceContainerLowest"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="monospace"
+                android:maxLines="1"
+                android:text="Trasowanie/pomiar"
+                android:textColor="@color/brand_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnFotoTras"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Zrób zdjęcie"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_camera" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zdjEdycjaRowTras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnZdjEdit"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:contentDescription="Edytuj zdjęcie"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="4dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_edytuj"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="18dp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnZdjLustro"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:contentDescription="Lustro"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="4dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_lustro"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="18dp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnKadr"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:contentDescription="Kadr"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="4dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_kadr"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="18dp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnZdjObrot"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:contentDescription="Obróć 90°"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="4dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_reset"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="18dp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnZdjUsun"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:contentDescription="Usuń zdjęcie"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="4dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_kosz"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="18dp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnTrybGl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="Tryb: Bazowanie  (dotknij, aby zmienić)"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp" />
+
+        <LinearLayout
+            android:id="@+id/bazowaniePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBXlinia"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="X: linia"
+                    android:textSize="10sp"
+                    app:cornerRadius="0dp" />
+
+                <Space
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnBXokrag"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="X: okrąg"
+                    android:textSize="10sp"
+                    app:cornerRadius="0dp" />
+
+                <Space
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnBYlinia"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="Y: linia"
+                    android:textSize="10sp"
+                    app:cornerRadius="0dp" />
+
+                <Space
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnBYpunkt"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="Y: punkt"
+                    android:textSize="10sp"
+                    app:cornerRadius="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUndo"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="Cofnij"
+                    android:textSize="10sp"
+                    app:cornerRadius="0dp" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="Wyczyść"
+                    android:textSize="10sp"
+                    app:cornerRadius="0dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- EDYTOR ZDJĘĆ (na samej górze) -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent" android:layout_height="300dp"
+            android:layout_marginTop="5dp" app:cardCornerRadius="0dp">
+
+            <pl.rampt.app.TrasowanieCanvasView android:id="@+id/canvas"
+                android:layout_width="match_parent" android:layout_height="match_parent" />
+        </com.google.android.material.card.MaterialCardView>
+        <!-- EDYCJA ZDJĘCIA: te same ikony i układ co w module Pomiar płaski -->
+        <LinearLayout android:id="@+id/kadrBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:orientation="horizontal" android:visibility="gone">
+            <Button android:id="@+id/btnKadrCofnij" app:cornerRadius="0dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Cofnij pkt kadru" android:textSize="10sp" android:minHeight="0dp"
+                android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="3dp" android:paddingBottom="3dp" />
+            <Space android:layout_width="4dp" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnKadrWyczysc" app:cornerRadius="0dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Wyczyść kadr" android:textSize="10sp" android:minHeight="0dp"
+                android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="3dp" android:paddingBottom="3dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvZdjPomoc"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" android:fontFamily="monospace" android:textSize="9sp"
+            android:textColor="?android:attr/textColorSecondary" android:visibility="gone"
+            android:text="Edycja zdjęcia: 1 palec poza punktem = przesuń, 1 palec na punkcie kadru = deformuj zdjęcie, 2 palce = obróć/przybliż. Kadr: dotknij, by dodać punkt kształtu; przeciągnij punkt, by go przesunąć." />
+
+        <!-- PANEL BAZOWANIA -->
+
+        <!-- PANEL TRASOWANIA -->
+        <LinearLayout android:id="@+id/trasowaniePanel"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingTop="5dp" android:visibility="gone">
+            <!-- Punkty dowolne -->
+            <LinearLayout android:id="@+id/formDowolne"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingTop="4dp" android:visibility="gone">
+                <TableLayout android:id="@+id/tabelaPunkty"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:stretchColumns="0,1,2">
+                    <TableRow>
+                        <TextView android:text="Nr" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="3dp" />
+                        <TextView android:text="X [mm]" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="3dp" />
+                        <TextView android:text="Y [mm]" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="3dp" />
+                    </TableRow>
+                </TableLayout>
+                <Button android:id="@+id/btnDodajWiersz" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Dodaj punkt" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="3dp" android:paddingBottom="3dp" />
+            </LinearLayout>
+
+            <!-- Punkty po prostej -->
+            <LinearLayout android:id="@+id/formProsta"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingTop="4dp" android:visibility="gone">
+                <EditText android:id="@+id/etKat" android:hint="położenie kątowe [°]"
+                    android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+                <EditText android:id="@+id/etOdl" android:hint="odległość między punktami [mm]"
+                    android:inputType="numberDecimal" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+                <EditText android:id="@+id/etLiczba" android:hint="liczba punktów"
+                    android:inputType="number" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/etProstaX0" android:hint="X początkowy"
+                        android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                    <Space android:layout_width="5dp" android:layout_height="wrap_content" />
+                    <EditText android:id="@+id/etProstaY0" android:hint="Y początkowy"
+                        android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Punkty na okręgu -->
+            <LinearLayout android:id="@+id/formOkrag"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingTop="4dp" android:visibility="gone">
+                <EditText android:id="@+id/etSrednica" android:hint="średnica podziałowa [mm]"
+                    android:inputType="numberDecimal" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+                <EditText android:id="@+id/etIlosc" android:hint="ilość punktów"
+                    android:inputType="number" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+                <EditText android:id="@+id/etRozm" android:hint="rozmieszczenie kątowe [°] (opcjonalne)"
+                    android:inputType="numberDecimal" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/etKatStart" android:hint="kąt startowy [°]"
+                        android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                    <Space android:layout_width="5dp" android:layout_height="wrap_content" />
+                    <EditText android:id="@+id/etKatEnd" android:hint="kąt końcowy [°]"
+                        android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Punkty w siatce -->
+            <LinearLayout android:id="@+id/formSiatka"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingTop="4dp" android:visibility="gone">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/etKol" android:hint="kolumny"
+                        android:inputType="number" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                    <Space android:layout_width="5dp" android:layout_height="wrap_content" />
+                    <EditText android:id="@+id/etWier" android:hint="wiersze"
+                        android:inputType="number" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/etDX" android:hint="odstęp X [mm]"
+                        android:inputType="numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                    <Space android:layout_width="5dp" android:layout_height="wrap_content" />
+                    <EditText android:id="@+id/etDY" android:hint="odstęp Y [mm]"
+                        android:inputType="numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/etGX0" android:hint="X początkowy"
+                        android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                    <Space android:layout_width="5dp" android:layout_height="wrap_content" />
+                    <EditText android:id="@+id/etGY0" android:hint="Y początkowy"
+                        android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                        android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:autofillHints="" />
+                </LinearLayout>
+                <EditText android:id="@+id/etGKat" android:hint="obrót siatki [°]"
+                    android:inputType="numberSigned|numberDecimal" android:maxLines="1" android:textSize="12sp"
+                    android:minHeight="0dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnT1" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:text="1 punkt (środek)" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetLeft="0dp" android:insetRight="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:paddingTop="3dp" android:paddingBottom="3dp" />
+                <Space android:layout_width="3dp" android:layout_height="wrap_content" />
+                <Button android:id="@+id/btnT2" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:text="5 chaotycznie" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetLeft="0dp" android:insetRight="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:paddingTop="3dp" android:paddingBottom="3dp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" android:orientation="horizontal">
+                <Button android:id="@+id/btnT3" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:text="po okręgu" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetLeft="0dp" android:insetRight="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:paddingTop="3dp" android:paddingBottom="3dp" />
+                <Space android:layout_width="3dp" android:layout_height="wrap_content" />
+                <Button android:id="@+id/btnT4" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:text="siatka" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetLeft="0dp" android:insetRight="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:paddingTop="3dp" android:paddingBottom="3dp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:id="@+id/tvNaprow" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:fontFamily="monospace" android:textStyle="bold"
+                    android:textSize="12sp" android:textColor="@color/brand_primary" android:text="do celu: –" />
+                <Button android:id="@+id/btnPotwierdz" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Potwierdź punkt" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="3dp" android:paddingBottom="3dp" />
+                <Button android:id="@+id/btnSledz" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Śledź: wył" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="3dp" android:paddingBottom="3dp"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:gravity="end" android:orientation="horizontal">
+                <Button android:id="@+id/btnDystansXY" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="X/Y: pozycja" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="3dp" android:paddingBottom="3dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- PANEL: POMIAR POZYCJI -->
+        <LinearLayout android:id="@+id/pomiarPanel"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="4dp">
+                <Button android:id="@+id/btnZapiszPoz" app:cornerRadius="0dp"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:text="Zapisz pozycję" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="4dp" android:paddingBottom="4dp" />
+                <Space android:layout_width="5dp" android:layout_height="wrap_content" />
+                <Button android:id="@+id/btnClearPoz" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Wyczyść" android:textSize="10sp" android:minHeight="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:paddingTop="4dp" android:paddingBottom="4dp" />
+            </LinearLayout>
+            <TableLayout android:id="@+id/tabelaPomiar"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:stretchColumns="0,1,2">
+                <TableRow>
+                    <TextView android:text="Nr" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="5dp" />
+                    <TextView android:text="X [mm]" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="5dp" />
+                    <TextView android:text="Y [mm]" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="5dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <!-- NOWY UKŁAD -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" app:cardCornerRadius="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="7dp">
+                <Button android:id="@+id/btnNowyToggle" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="// nowy układ  [ukryj]" android:textSize="11sp"
+                    android:minHeight="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:paddingTop="1dp" android:paddingBottom="1dp" />
+                <LinearLayout android:id="@+id/nowyBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/tvX" android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:fontFamily="monospace" android:textStyle="bold"
+                            android:textSize="20sp" android:textColor="?android:attr/textColorPrimary" android:text="X: –" />
+                        <TextView android:id="@+id/tvY" android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:fontFamily="monospace" android:textStyle="bold"
+                            android:textSize="20sp" android:textColor="?android:attr/textColorPrimary" android:text="Y: –" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/tvR" android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:fontFamily="monospace" android:textStyle="bold"
+                            android:textSize="13sp" android:textColor="@color/brand_secondary" android:text="R: –" />
+                        <TextView android:id="@+id/tvKat" android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:fontFamily="monospace" android:textStyle="bold"
+                            android:textSize="13sp" android:textColor="@color/brand_secondary" android:text="kąt: –" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvInfo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:fontFamily="monospace" android:textStyle="italic" android:textSize="10sp"
+                        android:textColor="#999999" android:text="układ: środek obrotu" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- UKŁAD ENKODERA -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" app:cardCornerRadius="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="7dp">
+                <Button android:id="@+id/btnEncToggle" app:cornerRadius="0dp"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="// układ enkodera  [pokaż]" android:textSize="11sp"
+                    android:minHeight="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:paddingTop="1dp" android:paddingBottom="1dp" />
+                <TextView android:id="@+id/tvEnc" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:visibility="gone" android:fontFamily="monospace" android:textSize="12sp"
+                    android:textColor="#777777" android:text="r = –   θ = –" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" app:cardCornerRadius="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="7dp">
+                <TextView style="@style/CardTitle" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="// współrzędne punktów" />
+                <TableLayout android:id="@+id/tabelaCele"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:stretchColumns="0,1,2">
+                    <TableRow>
+                        <TextView android:text="Nr" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="3dp" />
+                        <TextView android:text="X [mm]" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="3dp" />
+                        <TextView android:text="Y [mm]" android:fontFamily="monospace" android:textStyle="bold" android:textSize="11sp" android:padding="3dp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Bluetooth klasyczny (SPP). Na Androidzie 12+ (API 31) obowiązują nowe uprawnienia. -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <!--
+         SCAN potrzebny tylko do wykrywania nowych urządzeń; łączymy się z już sparowanym,
+         więc deklarujemy neverForLocation, żeby nie wymagać lokalizacji.
+    -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <!-- Logowanie przez Google (Credential Manager) wymaga dostępu do internetu. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RamPT">
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="Elementy cylindryczne" />
+
+        <activity
+            android:name=".TrasowanieActivity"
+            android:exported="false"
+            android:label="Trasowanie" />
+        <activity
+            android:name=".WalcowoscActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".BicieActivity"
+            android:exported="false" />
+
+        <activity android:name=".TabelaActivity" android:exported="false" android:label="Tabela 360" />
+        <activity android:name=".RaportActivity" android:exported="false" android:label="Raport" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="pl.rampt.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

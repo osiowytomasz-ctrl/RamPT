@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ikona metody pomiaru "maszyna (CNC)" — wyciągnięta z methodIconSvg()/methodMarkSvg() w
+     karta_pomiaru_płaszczy.html: ramka odczytu (tam wypełniona napisem "CNC" — ścieżki wektorowe
+     nie renderują tekstu, więc napis "CNC" zostaje jako etykieta tekstowa obok tej ikony w UI, tak
+     jak w oryginale, gdzie tekst leży NA tym samym kształcie ramki). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp" android:height="16dp"
+    android:viewportWidth="22" android:viewportHeight="16">
+    <path android:fillColor="#FFFFFFFF" android:strokeColor="#1565C0" android:strokeWidth="1.3"
+        android:pathData="M3,1 L19,1 A2,2 0 0,1 21,3 L21,13 A2,2 0 0,1 19,15
+                           L3,15 A2,2 0 0,1 1,13 L1,3 A2,2 0 0,1 3,1 Z" />
+</vector>

@@ -1,0 +1,27 @@
+{
+  "_uwaga": "To jest tylko przykład kształtu pliku. Prawdziwy plik google-services.json pobierz z Firebase Console (patrz SETUP_FIREBASE.md) i zapisz jako app/google-services.json (bez '.example'). Ten plik jest w .gitignore, więc każdy programista/CI dodaje swój własny.",
+  "project_info": {
+    "project_number": "000000000000",
+    "project_id": "rampt-xxxxx",
+    "storage_bucket": "rampt-xxxxx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+        "android_client_info": { "package_name": "pl.rampt.app" }
+      },
+      "oauth_client": [
+        {
+          "client_id": "000000000000-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [ { "current_key": "AIzaSy..." } ],
+      "services": {
+        "appinvite_service": { "other_platform_oauth_client": [] }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

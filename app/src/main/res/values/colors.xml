@@ -1,0 +1,16 @@
+<resources>
+    <color name="brand_primary">#1565C0</color>
+    <color name="brand_primary_dark">#0D47A1</color>
+    <color name="brand_primary_container">#D6E4FF</color>
+    <color name="brand_secondary">#00897B</color>
+    <color name="accent_red">#E53935</color>
+    <color name="ok_green">#2E7D32</color>
+    <color name="status_off">#757575</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- tła paneli karty tokarki - jedno na sekcję, żeby wizualnie odróżnić geometrię/spoiny/kołnierze -->
+    <color name="bg_panel_geometria">#E3F2FD</color>
+    <color name="bg_panel_spoiny">#FFF3E0</color>
+    <color name="bg_panel_kolnierze">#E8F5E9</color>
+</resources>

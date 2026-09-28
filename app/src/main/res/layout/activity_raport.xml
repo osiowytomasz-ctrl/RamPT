@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- PAPIER: to trafia do PDF -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/paper"
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="ZAKŁAD KONSTRUKCJI SPAWANYCH FERRUM S.A."
+                    android:textColor="#111111" android:textStyle="bold" android:textSize="13sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="ul. Hutnicza 3, 40-241 Katowice · www.ferrumzks.eu"
+                    android:textColor="#555555" android:textSize="10sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="2dp"
+                    android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+                    android:background="#111111" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="RAPORT POMIAROWY" android:textColor="#111111"
+                    android:textStyle="bold" android:textSize="18sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Płaszcz — bicie promieniowe, ustawienie osi"
+                    android:textColor="#333333" android:textSize="12sp" />
+
+                <!-- 1 Dane -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:text="1  DANE"
+                    android:textColor="#111111" android:textStyle="bold" android:textSize="13sp" />
+
+                <EditText android:id="@+id/etKlient"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Klient" android:inputType="text" android:maxLines="1"
+                    android:textColor="#111111" android:textColorHint="#999999"
+                    android:textSize="13sp" android:autofillHints="" />
+                <EditText android:id="@+id/etKomis"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Komis" android:inputType="text" android:maxLines="1"
+                    android:textColor="#111111" android:textColorHint="#999999"
+                    android:textSize="13sp" android:autofillHints="" />
+                <EditText android:id="@+id/etElement"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Nazwa elementu" android:inputType="text" android:maxLines="1"
+                    android:textColor="#111111" android:textColorHint="#999999"
+                    android:textSize="13sp" android:autofillHints="" />
+                <EditText android:id="@+id/etPozycja"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Pozycja" android:inputType="text" android:maxLines="1"
+                    android:textColor="#111111" android:textColorHint="#999999"
+                    android:textSize="13sp" android:autofillHints="" />
+                <TextView android:id="@+id/tvMeta"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:fontFamily="monospace"
+                    android:textColor="#222222" android:textSize="11sp"
+                    android:text="Wygenerowano: —" />
+
+                <!-- 2 Zdjęcie -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:text="2  ZDJĘCIE ELEMENTU"
+                    android:textColor="#111111" android:textStyle="bold" android:textSize="13sp" />
+                <ImageView android:id="@+id/imgFoto"
+                    android:layout_width="match_parent" android:layout_height="220dp"
+                    android:layout_marginTop="4dp" android:adjustViewBounds="true"
+                    android:background="#F0F0F0" android:scaleType="fitCenter"
+                    android:contentDescription="Zdjęcie elementu" />
+                <TextView android:id="@+id/tvFotoData"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:fontFamily="monospace" android:textColor="#555555" android:textSize="10sp"
+                    android:text="brak zdjęcia" />
+
+                <!-- 3 Profil bicia -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:text="3  PROFIL BICIA ⌰"
+                    android:textColor="#111111" android:textStyle="bold" android:textSize="13sp" />
+                <pl.rampt.app.PolarRoundnessView android:id="@+id/polar"
+                    android:layout_width="match_parent" android:layout_height="320dp" />
+
+                <!-- 4 Wyniki -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="4  WYNIKI POMIARU I OBLICZEŃ"
+                    android:textColor="#111111" android:textStyle="bold" android:textSize="13sp" />
+                <TextView android:id="@+id/tvWyniki"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:fontFamily="monospace"
+                    android:textColor="#111111" android:textSize="11sp" android:text="—" />
+
+                <!-- 5 Wykres bicia -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:text="5  WYKRES BICIA ⌰"
+                    android:textColor="#111111" android:textStyle="bold" android:textSize="13sp" />
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chartBicie"
+                    android:layout_width="match_parent" android:layout_height="200dp"
+                    android:layout_marginTop="4dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginTop="14dp" android:layout_marginBottom="8dp"
+                    android:background="#AAAAAA" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="6  PODPISY" android:textColor="#111111"
+                    android:textStyle="bold" android:textSize="12sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:fontFamily="monospace"
+                    android:textColor="#222222" android:textSize="11sp"
+                    android:text="Wykonał:      pomiar / ustawienie\nSprawdził:    —\nZatwierdził:  kierownik" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- PRZYCISKI (poza papierem, nie trafiają do PDF) -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="10dp">
+            <Button android:id="@+id/btnFoto" app:cornerRadius="0dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Zrób zdjęcie" android:textSize="12sp" />
+            <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnGaleria" app:cornerRadius="0dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Z galerii" android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnPdf" app:cornerRadius="0dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="Udostępnij PDF" android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
