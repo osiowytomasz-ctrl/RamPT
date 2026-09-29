@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Awaryjna (nieadaptacyjna) wersja ikony dla API 24-25 - Android Studio/AAPT2 akceptuje
+     wektor jako zasób mipmap tak samo jak w drawable; poniżej 26 nie ma adaptive-icon,
+     więc tło i motyw są spłaszczone w jeden rysunek. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#1565C0" android:pathData="M0,0 h108 v108 h-108 z" />
+    <path android:fillColor="#0D47A1" android:fillAlpha="0.35" android:pathData="M0,108 L54,54 L108,108 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M54,26 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="7" android:strokeLineCap="round" android:pathData="M54,30 L36,82" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="7" android:strokeLineCap="round" android:pathData="M54,30 L72,82" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:strokeLineCap="round" android:pathData="M45,56 L63,56" />
+    <path android:fillColor="#FFFFFF" android:pathData="M36,82 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M72,82 L66,92 L78,92 Z" />
+</vector>
